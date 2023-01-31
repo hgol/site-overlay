@@ -1,0 +1,3 @@
+{{- with .GetPage "note" -}}
+	{{- partial "hgol/notice.html" (dict "title" "Note" "content" .Content) -}}
+{{- end -}}

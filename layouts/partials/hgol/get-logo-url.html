@@ -1,0 +1,9 @@
+{{- $logo := "" -}}
+{{- if .Params.logo -}}
+	{{- $logo = .Params.logo -}}
+{{- else if .Resources.GetMatch "logo.*" -}}
+	{{- $logo = (.Resources.GetMatch "logo.*").RelPermalink -}}
+{{- else if .Parent -}}
+	{{- $logo = partial "hgol/get-logo-url.html" .Parent -}}
+{{- end -}}
+{{- return $logo -}}

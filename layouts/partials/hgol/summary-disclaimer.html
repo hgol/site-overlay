@@ -1,0 +1,1 @@
+{{- partial "hgol/notice.html" (dict "title" "Disclaimer" "content" (printf "<p>This is only a summary of the license. The <a href=\"%s\">legal text</a> contains the terms of the license.</p>" (htmlEscape (.GetPage "legal").RelPermalink) | safeHTML)) -}}

@@ -1,0 +1,3 @@
+{{- with .OutputFormats.Get "PlainText" -}}
+	{{- partial "hgol/notice.html" (dict "title" "Plain-Text Version" "content" (printf "<p>A <a href=\"%s\">plain-text version</a> of this license is available.</p>" (htmlEscape .RelPermalink) | safeHTML)) -}}
+{{- end -}}

@@ -1,0 +1,12 @@
+{{- define "head-extra" -}}
+	{{- partial "hgol/styles.html" -}}
+{{- end -}}
+{{- define "main" -}}
+	<article>
+		{{- partial "hgol/page-logo.html" . -}}
+		{{- partial "hgol/note.html" . -}}
+		{{- partial "hgol/summary-disclaimer.html" . -}}
+		<h1>{{ .Title }}</h1>
+		{{- .Content -}}
+	</article>
+{{- end -}}
